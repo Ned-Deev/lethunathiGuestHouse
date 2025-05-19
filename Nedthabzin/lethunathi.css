@@ -1,0 +1,534 @@
+/* Base Theme Colors */
+:root {
+  --primary-yellow: #f4c10f;
+  --dark: #2c3e50;
+  --light-bg: #fffaf0;
+  --text-color: #333;
+  --highlight-yellow: #f9d71c; /* Slightly lighter yellow for hover effects */
+  --dark-yellow: #e2b307; /* Darker shade of yellow */
+}
+
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: var(--primary-yellow);
+  margin-top: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: var(--dark);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo a,
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .logo a {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-yellow);
+}
+
+/* Hero Section */
+.hero {
+  background: url("background/hero-image.jpg") no-repeat center center / cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero .hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* Buttons */
+.cta-btn {
+  background-color: var(--primary-yellow);
+  color: black;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--dark-yellow);
+}
+
+/* Section Layout */
+.section-padding {
+  padding: 60px 20px;
+}
+
+/* Rooms Section */
+#rooms {
+  padding: 80px 20px;
+  background-color: var(--light-bg);
+  font-family: "Poppins", sans-serif;
+}
+
+#rooms h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Grid layout */
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.room {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-bottom: 5px solid var(--primary-yellow);
+}
+
+.room:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.room:hover img {
+  transform: scale(1.05);
+}
+
+.room-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.room-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.room-info p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .rooms-container {
+    grid-template-columns: 1fr 1fr; /* Two columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-container {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+}
+
+/* Gallery */
+.gallery-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 32%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px;
+  background: var(--light-bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #929191;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-text {
+  flex: 1 1 350px;
+}
+
+.contact-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.contact-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-info p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-info i {
+  color: var(--primary-yellow);
+  margin-right: 10px;
+}
+
+.contact-info a {
+  color: var(--primary-yellow);
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-yellow);
+  outline: none;
+}
+
+.contact-form button {
+  background-color: var(--primary-yellow);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--dark-yellow);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  color: var(--primary-yellow);
+}
+
+/* Floating Social Sidebar */
+.social-sidebar {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+  border-radius: 5px 0 0 5px;
+  padding: 10px 5px;
+  z-index: 1000;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-sidebar a {
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.social-sidebar a:hover {
+  background: var(--primary-yellow);
+  color: black;
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-bg);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid var(--primary-yellow);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.loaded #preloader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Booking Calendar */
+.booking-calendar {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.calendar-key {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.calendar-key span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+.calendar-key .available {
+  background-color: #6bbf59;
+}
+
+.calendar-key .booked {
+  background-color: #e74c3c;
+}
+
+.calendar-key .pending {
+  background-color: #f39c12;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.day {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.day.available {
+  background-color: #e9fbe8;
+  color: #2c7a2c;
+}
+
+.day.booked {
+  background-color: #fdecea;
+  color: #c0392b;
+}
+
+.day.pending {
+  background-color: #fef5e6;
+  color: #f39c12;
+}
+
+/* Booking Form Section */
+.booking-form-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.booking-form-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ece5a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--primary-yellow);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form .form-group {
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.booking-form button {
+  background-color: var(--primary-yellow);
+  color: white;
+  padding: 14px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: var(--dark-yellow);
+}
+.container {
+  text-align: center;
+}
+
+.open-map-btn {
+  background-color: #ffcc00; /* Yellow background */
+  color: black; /* Dark text for contrast */
+  padding: 15px 32px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it behave like a button */
+  transition: background-color 0.3s ease;
+}
+
+.open-map-btn:hover {
+  background-color: #ffb800; /* Darker yellow on hover */
+}

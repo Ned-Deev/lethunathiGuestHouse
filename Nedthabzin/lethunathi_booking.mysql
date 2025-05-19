@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS lethunathi_booking;
+USE lethunathi_booking;
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    checkin DATE NOT NULL,
+    checkout DATE NOT NULL,
+    guests INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE bookings ADD room VARCHAR(100);
+ALTER TABLE bookings ADD status ENUM('pending', 'confirmed', 'cancelled') DEFAULT 'pending';

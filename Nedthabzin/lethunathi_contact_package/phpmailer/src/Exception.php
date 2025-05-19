@@ -1,0 +1,3 @@
+<?php
+// Exception class stub
+?>

@@ -1,0 +1,3 @@
+<?php
+// SMTP class stub
+?>

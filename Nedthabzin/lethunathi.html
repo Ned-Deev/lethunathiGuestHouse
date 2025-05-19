@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lethunathi Guesthouse - A serene getaway in nature."
+    />
+    <meta
+      name="keywords"
+      content="guesthouse, Lethunathi, peaceful stay, luxury rooms"
+    />
+    <meta name="author" content="Lethunathi Guesthouse" />
+    <meta property="og:title" content="Lethunathi Guesthouse" />
+    <meta
+      property="og:description"
+      content="Your peaceful getaway awaits at Lethunathi Guesthouse."
+    />
+    <meta property="og:image" content="path/to/hero-image.jpg" />
+    <title>Lethunathi Guesthouse | Stay in Comfort</title>
+
+    <!-- Fonts and Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="lethunathi.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Lightbox -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Analytics (Replace YOUR_TRACKING_ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "YOUR_TRACKING_ID");
+    </script>
+
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      async
+      defer
+    ></script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo"><a href="#">Lethunathi Guesthouse</a></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#booking" class="cta-btn">Book Now</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Welcome to Lethunathi Guesthouse</h1>
+          <p>Your peaceful getaway awaits!</p>
+          <a href="#booking" class="cta-btn">Book Now</a>
+        </div>
+      </section>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <h2>About Us</h2>
+      <p>
+        Located in the heart of nature, Lethunathi Guesthouse offers a serene
+        and luxurious retreat with all the comforts of home...
+      </p>
+    </section>
+
+    <!-- Rooms Section -->
+    <!-- Rooms Section -->
+    <section id="rooms" class="section-padding">
+      <h2>Our Rooms</h2>
+      <div class="rooms-container">
+        <div class="room" data-tilt>
+          <img
+            src="gallery/room1.jpg"
+            alt="Deluxe Room at Lethunathi Guesthouse"
+          />
+          <div class="room-info">
+            <h3>Deluxe Room</h3>
+            <p>
+              Spacious room with a king-sized bed, private bathroom, air
+              conditioning, and a beautiful garden view.
+            </p>
+            <a href="#booking" class="cta-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="room" data-tilt>
+          <img
+            src="gallery/room2.jpg"
+            alt="Standard Room at Lethunathi Guesthouse"
+          />
+          <div class="room-info">
+            <h3>Standard Room</h3>
+            <p>
+              Comfortable room with a double bed, shared bathroom access, and
+              essential amenities for a relaxed stay.
+            </p>
+            <a href="#booking" class="cta-btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="room" data-tilt>
+          <img
+            src="gallery/room4.jpg"
+            alt="Family or Friends Room at Lethunathi Guesthouse"
+          />
+          <div class="room-info">
+            <h3>Family or Friends Room</h3>
+            <p>
+              This large multi-bed room accommodates 5 to 7 people. Ideal for
+              families or groups of friends with multiple single or bunk beds,
+              private bathroom, and a mini lounge area.
+            </p>
+            <a href="#booking" class="cta-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <h2>Our Rooms</h2>
+      <div class="gallery-container">
+        <a
+          href="images/roomA_thumbnail.jpg"
+          data-lightbox="rooms"
+          data-title="Room 1"
+        >
+          <img src="images/roomA_thmbnail.jpg" alt="Room 1" />
+        </a>
+
+        <a href="images/roomA_jpg" data-lightbox="rooms" data-title="Room 2">
+          <img src="images/roomD_thumbanail.jpg" lt="Room 2" />
+        </a>
+
+        <a href="images/room3.jpg" data-lightbox="rooms" data-title="Room 3">
+          <img src="images/roomB_thumnail.jpg" alt="Room 3" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <!-- Booking Form Section -->
+    <section id="booking" class="booking-form-section section-padding">
+      <div class="container">
+        <h2>Book Your Stay</h2>
+        <form action="process_booking.php" method="post" class="booking-form">
+          <div class="form-group">
+            <label for="room">Room Type:</label>
+            <select id="room" name="room" required>
+              <option value="">-- Select Room Type --</option>
+              <option value="Deluxe Room">Deluxe Room</option>
+              <option value="Standard Room">Standard Room</option>
+              <option value="Family or Friends Room">
+                Family or Friends Room
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required />
+          </div>
+
+          <div class="form-group">
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required />
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required />
+          </div>
+
+          <button type="submit" class="cta-btn">Submit Booking</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <h2>Get In Touch</h2>
+          <p>
+            We'd love to hear from you! Reach out with any questions or
+            bookings.
+          </p>
+
+          <div class="contact-info">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 10927 Mokoena St,
+              Dobsonville, Soweto, 1863 SA
+            </p>
+            <p><i class="fas fa-phone-alt"></i> +27 83 592 7671</p>
+            <p>
+              <i class="fas fa-envelope"></i> info@lethunathiguesthouse.co.za
+            </p>
+            <p>
+              <i class="fas fa-globe"></i>
+              <a href="https://www.lethunathiguesthouse.co.za" target="_blank"
+                >www.lethunathiguesthouse.co.za</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <form class="contact-form" action="contact_process.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container">
+      <a
+        class="open-map-btn"
+        href="https://www.google.com/maps?q=10927+Mokoena+St,+Dobsonville,+Soweto,+1863"
+        target="_blank"
+      >
+        Open this address in Google Maps
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Lethunathi Guesthouse | All Rights Reserved</p>
+      <div class="social-sidebar">
+        <a
+          href="https://www.facebook.com/lethunathi"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/lethunathi"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://twitter.com/lethunathi"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://wa.me/27821234567"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="lethunathi.js"></script>
+  </body>
+</html>
