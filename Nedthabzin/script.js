@@ -218,3 +218,12 @@ function getMapStyles() {
     },
   ];
 }
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+function viewInGoogleMaps() {
+  const address = "10927+Mokoena+St,+Dobsonville,+Soweto,+1863";
+  window.open(`https://www.google.com/maps?q=${address}`, "_blank");
+}

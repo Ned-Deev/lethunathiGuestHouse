@@ -512,23 +512,193 @@ body.loaded #preloader {
 .booking-form button:hover {
   background-color: var(--dark-yellow);
 }
-.container {
+
+/* About Section */
+.about-section {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
-.open-map-btn {
-  background-color: #ffcc00; /* Yellow background */
-  color: black; /* Dark text for contrast */
-  padding: 15px 32px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make it behave like a button */
-  transition: background-color 0.3s ease;
+.about-section h2 {
+  font-size: 36px;
+  color: var(--primary-yellow);
+  margin-bottom: 20px;
 }
 
-.open-map-btn:hover {
-  background-color: #ffb800; /* Darker yellow on hover */
+.about-intro {
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card i {
+  font-size: 36px;
+  color: var(--primary-yellow);
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+}
+
+.room-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-yellow);
+  margin-bottom: 15px;
+}
+
+#preloader {
+  display: block;
+  /* Other styling for preloader */
+}
+
+body.loaded #preloader {
+  display: none;
+}
+
+.address-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--dark); /* Uses your theme's dark background */
+  color: var(--light-bg); /* Light text color */
+}
+
+.address-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.address-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--primary-yellow);
+}
+
+.address-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.map-btn {
+  background-color: var(--primary-yellow);
+  color: black;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.map-btn:hover {
+  background-color: var(--dark-yellow);
+  color: white;
+}
+
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+footer .social-media {
+  margin-bottom: 15px;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+  color: var(--primary-yellow);
+}
+
+footer p {
+  font-size: 14px;
+  color: #ccc;
+}
+footer .footer-links {
+  margin-top: 20px;
+}
+footer .footer-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-links a:hover {
+  color: var(--primary-yellow);
+}
+footer .footer-links {
+  margin-top: 20px;
+}
+footer .footer-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-links a:hover {
+  color: var(--primary-yellow);
 }
